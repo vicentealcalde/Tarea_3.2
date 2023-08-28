@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+{% block header %}
+  <h1>{% block title %}Books{% endblock %}</h1>
+{% endblock %}
+
+{% block content %}
+    <table>
+        <tr>
+            <th>Name</th>
+            <th>Author</th>
+            <th>Description</th>
+            <th>Average Rating</th>
+        </tr>
+        {% for book in books %}
+        <tr>
+            <td>{{ book['item']['title'] }}</td>
+            <td>{{ book['item']['author']['name'] }}</td>
+            <td>{{ book['item']['description'] }}</td>
+            <td>{{ book['average_score'] }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+{% endblock %}

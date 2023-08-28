@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block header %}
+  <h1>{% block title %}Authors{% endblock %}</h1>
+{% endblock %}
+
+{% block content %}
+    <table>
+        <tr>
+            <th>Name</th>
+            <th>Number of Books</th>
+            <th>Average Rating</th>
+        </tr>
+        {% for author in authors %}
+        <tr>
+            <td>{{ author['item']['name'] }}</td>
+            <td>{{ author['item']['books']|length }}</td>
+            <td>{{ author['average_score'] }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+{% endblock %}

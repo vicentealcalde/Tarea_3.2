@@ -1,0 +1,5 @@
+database/
+dumps/
+parse.ipynb
+**/__pycache__/
+.vscode/

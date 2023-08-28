@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block header %}
+  <h1>{% block title %}Index{% endblock %}</h1>
+{% endblock %}
+
+{% block content %}
+<ul>
+    <li><a href="{{ url_for('authors_index', _external=True) }}">Authors</a>
+    <li><a href="{{ url_for('books_index', _external=True) }}">Books</a>
+</ul>
+{% endblock %}
