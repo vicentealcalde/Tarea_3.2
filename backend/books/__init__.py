@@ -15,7 +15,6 @@ def create_app():
     # create and configure the app
     app = Flask(__name__)
     
-    
     app.config["SQLALCHEMY_DATABASE_URI"] = "postgresql://postgres:postgres@dbgroup2-3g.c76rpf8ygv4l.us-east-1.rds.amazonaws.com/postgres"
     alembic = Alembic()
 
